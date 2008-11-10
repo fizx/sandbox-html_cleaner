@@ -1,0 +1,1 @@
+This removes on* handlers, and script tags, while pretty-printing the html.  It's not designed to defend against XSS attacks, but rather to present human-readable html.
