@@ -8,7 +8,10 @@
 		<xsl:when test="starts-with(translate(name(), 'ON', 'on'), 'on')">	
 		</xsl:when>
 		<xsl:when test="text()">	
-			<xsl:value-of select="normalize-space()" />
+			<xsl:copy>
+				<xsl:apply-templates select="@*" />
+				<xsl:value-of select="normalize-space()" />
+			</xsl:copy>
 		</xsl:when>
 		<xsl:otherwise>
 		  <xsl:copy>
